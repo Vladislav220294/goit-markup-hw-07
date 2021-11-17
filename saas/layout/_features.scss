@@ -1,0 +1,33 @@
+.features-title {
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: var(--secondary-text-color);
+}
+.features-list {
+  display: flex;
+}
+.features-item {
+  max-width: 270px;
+}
+.features-item:not(:last-child) {
+  margin-right: 30px;
+}
+.features-thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+}
+.features-icon {
+  width: 70px;
+  height: 70px;
+}
