@@ -5,8 +5,10 @@
   display: flex;
 }
 
-.responsibilities-item:not(:last-child) {
-  margin-right: 30px;
+.responsibilities-item {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 .responsibilities-animation {
   position: relative;

@@ -9,10 +9,12 @@
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-backdrop.is-hidden {
-  visibility: hidden;
-  pointer-events: none;
-  opacity: 0;
+.modal-backdrop {
+  &.is-hidden {
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+  }
 }
 .modal-thumb {
   position: absolute;
@@ -24,9 +26,14 @@
   border-radius: 2px;
   background-color: var(--primary-background-color);
   padding: 40px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-backdrop.is-hidden .modal-thumb {
-  transform: translate(-50%, -50%) scale(1.1);
+.modal-backdrop {
+  &.is-hidden {
+    .modal-thumb {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+  }
 }
 .modal-btn {
   position: absolute;
@@ -47,8 +54,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-icon:hover,
-.modal-icon:focus {
-  fill: var(--accent-color);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
 }

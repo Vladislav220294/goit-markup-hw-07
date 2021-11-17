@@ -26,16 +26,20 @@
 }
 .form-input {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    border-color: var(--accent-color);
+  }
 }
-.form-input:focus {
-  border-color: var(--accent-color);
+
+.form-input {
+  + .modal-form-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &:focus + .modal-form-icon {
+    fill: var(--accent-color);
+  }
 }
-.form-input + .modal-form-icon {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.form-input:focus + .modal-form-icon {
-  fill: var(--accent-color);
-}
+
 .form-lable {
   display: block;
   margin-bottom: 4px;
@@ -56,20 +60,22 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   background-color: transparent;
-}
-.form-comment::placeholder {
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.01em;
 
-  color: rgba(117, 117, 117, 0.5);
+  &::placeholder {
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
 .form-comment {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    border-color: var(--accent-color);
+  }
 }
-.form-comment:focus {
-  border-color: var(--accent-color);
-}
+
 .modal-form-icon {
   position: absolute;
   left: 12px;
@@ -96,24 +102,32 @@
   justify-content: center;
   position: relative;
 }
-.check-text span {
-  width: 15px;
-  height: 15px;
-  border: 2px solid #000000;
-  border-radius: 2px;
-  margin-right: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.check-text {
+  span {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #000000;
+    border-radius: 2px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .input-icon-check {
   fill: #ffffff;
 }
 
-.input-check:checked + .check-text span {
-  background-color: var(--accent-color);
-  border: none;
+.input-check {
+  &:checked {
+    + .check-text {
+      span {
+        background-color: var(--accent-color);
+        border: none;
+      }
+    }
+  }
 }
 .visually-hidden {
   position: absolute;
@@ -148,9 +162,8 @@
   color: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-}
-
-.form-btn:hover,
-.form-btn:focus {
-  cursor: pointer;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
 }

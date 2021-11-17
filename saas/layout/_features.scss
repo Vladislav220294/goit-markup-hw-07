@@ -13,10 +13,11 @@
 }
 .features-item {
   max-width: 270px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
-.features-item:not(:last-child) {
-  margin-right: 30px;
-}
+
 .features-thumb {
   display: flex;
   justify-content: center;

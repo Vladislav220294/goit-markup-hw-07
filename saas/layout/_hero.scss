@@ -28,14 +28,16 @@
 
   color: var(--primary-background-color);
 }
-.button.button-hero {
-  padding: 10px 32px;
+.button {
+  &.button-hero {
+    padding: 10px 32px;
 
-  font-weight: 700;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  box-shadow: none;
+    font-weight: 700;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    box-shadow: none;
 
-  color: var(--primary-background-color);
-  background-color: var(--accent-color);
+    color: var(--primary-background-color);
+    background-color: var(--accent-color);
+  }
 }
