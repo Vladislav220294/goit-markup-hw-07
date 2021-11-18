@@ -1,4 +1,4 @@
-.features-title {
+.features-list__title {
   margin-bottom: 10px;
 
   font-weight: 700;
@@ -11,14 +11,14 @@
 .features-list {
   display: flex;
 }
-.features-item {
+.features-list__item {
   max-width: 270px;
   &:not(:last-child) {
     margin-right: 30px;
   }
 }
 
-.features-thumb {
+.features-list__thumb {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +28,7 @@
   background: #f5f4fa;
   border-radius: 4px;
 }
-.features-icon {
+.features-list__icon {
   width: 70px;
   height: 70px;
 }
